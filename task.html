@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- !  Solve the Javascript Question using Array Methods  -->
+
+    <script>
+// products=[
+//     {pid:100,pName:'apple',band:'5g',price:120000,display:'led'},
+//     {pid:101,pName:'samsaung',band:'5g',price:45000,display:'led'},
+//     {pid:102,pName:'blackberry',band:'4g',price:50000,display:'led'},
+//     {pid:103,pName:'nokia',band:'3g',price:1200,display:'lcd'},
+//     {pid:104,pName:'motorola',band:'4g',price:10000,display:'lcd'}
+// ]
+// console.log('-------------------------------------------------------------')
+
+
+// //1. print product name only
+
+// console.log(products);
+// products.forEach(p => {
+//     console.log(p.pName);
+    
+// });
+
+
+// console.log('-------------------------------------------------------------')
+
+// //2. print all mobile details whose display is lcd
+// console.log('-------------------------------------------------------------')
+// let filterproduct = products.filter((p)=>p.display=="lcd")
+// console.log(filterproduct);
+
+
+// //3. print 5g mobile phone name
+// console.log('-------------------------------------------------------------')
+// let name = products.filter((p)=>p.band=="5g")
+// name.forEach((p)=>console.log(p.pName))
+
+// //4. filter mobile based on price
+// console.log('--------------------------------------------------------------');
+
+// let mobile = products.filter((p)=>p.price<=10000)
+// console.log(mobile);
+
+// let mobile2 = products.filter ((p)=>p.price>=45000)
+// console.log(mobile2);
+// //5. print costly mobile
+// console.log('---------------------------------------------------------------')
+// let names = products.reduce((p1,p2)=>p1.price>p2.price?p1:p2)
+// console.log(names.pName);
+
+
+// //6. print low cost mobile
+// console.log('---------------------------------------------------------------');
+// let lowprice= products.reduce((p1,p2)=>p1.price<p2.price?p1:p2)
+// console.log(lowprice.pName);
+
+
+// 2 solve the Array question  Using Array methods
+
+
+//[ no,district,+ve cases,death rate,curred rate,1st dose vaccine,2nd dose vaccine]
+covid_data = [
+    [1,'Ernakulam',34000,2000,23000,20000,2000],
+    [2,'Idukki',14000,3000,25000,30000,1000],
+    [3,'Thrissur',24000,4000,33000,24000,2500],
+    [4,'Pathanamthitta',20000,2000,45000,22000,1500],
+    [5,'Kozhikode',44000,5000,12000,21000,500],
+    [6,'Palakkad',12000,1000,20000,23000,3400],
+    [7,'Kottayam',27000,1500,27000,14000,1000],
+    [8,'Kollam',14000,2500,25000,18000,2700]
+]
+
+//1. district having Highest +ve case - 
+
+let place = covid_data.reduce((c1,c2)=>c1[2]>c2[2]?c1:c2)
+console.log(place[1]);
+
+
+
+//2. district having Highest 1st dose vaccine - 
+
+let place1 = covid_data.reduce((c1,c2)=>c1[5]>c2[5]?c1:c2)
+console.log(place1[1]);
+
+console.log('-------------------------------------------');
+    
+
+//3. district having lowest death rate - 
+console.log('-------------------------------------------');
+
+let death_rate = covid_data.reduce((c1,c2)=>c1[3]<c2[3]?c1:c2)
+console.log(death_rate[1]);
+  
+
+
+//4. sort data with +ve case in descending order - 
+console.log('-------------------------------------------');
+
+
+console.log(covid_data.sort(function(a,b){return(b[2]-a[2])}));
+
+
+// let data = covid_data.map((p)=>p[2])
+// console.log(data);
+// data.sort 
+
+    
+//5. is district with +ve cases > 15000 - 
+console.log('-------------------------------------------');
+
+// let pCase = covid_data.some((p)=>p[2]>15000)
+// console.log(pCase);
+
+
+
+//6. sort data with 1st dose vaccine - 
+console.log('-------------------------------------------');
+
+console.log(covid_data.sort(function(a,b){return(b[5]-a[5])}));
+
+//7. Print Thrissur details - 
+console.log('-------------------------------------------');
+
+
+    console.log(covid_data[1]);
+    
+
+
+
+
+</script>
+</body>
+</html>

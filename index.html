@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // const fruits = ["banana","apple","orange","kiwi"];
+        //changing 0 index value//
+
+    //     fruits[0] ="grapes";
+    // document.getElementById('demo').innerHTML = fruits;
+
+    //toString//
+    // document.getElementById('demo').innerHTML = fruits.toString();
+
+    //taking a value using index//
+    // const person = ["john","doe",30];
+    // document.getElementById('demo').innerHTML =person[0];
+
+    //array object
+
+    // const name = {firstName:"john",secondName:"doe",age:30};
+    // document.getElementById('demo').innerHTML = name.firstName;
+
+
+    //length property
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // let size = fruits.length;
+    // document.getElementById('demo').innerHTML = size;
+
+    //Accessing the First Array Element
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // document.getElementById('demo').innerHTML = fruits[0];
+
+    //Accessing the Last Array Element
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // document.getElementById('demo').innerHTML = fruits[fruits.length -1];
+
+    //array at()
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // let fruit = fruits.at(2);
+    // document.getElementById('demo').innerHTML = fruit;
+
+    //array join()
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // document.getElementById('demo').innerHTML = fruits.join('*');
+
+    //array pop()
+    // const fruits = ["banana","apple","orange","kiwi"];
+    //  fruits.pop();
+    // document.getElementById('demo').innerHTML = fruits;
+
+    //array push()
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // fruits.push("grapes");
+    // document.getElementById('demo').innerHTML = fruits;
+
+    //array shift()
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // fruits.shift();
+    // document.getElementById('demo').innerHTML = fruits;
+
+    //array unshift
+    //  const fruits = ["banana","apple","orange","kiwi"];
+    //  fruits.unshift("berry");
+    //  document.getElementById('demo').innerHTML = fruits;
+
+    
+
+    //array concat() 2 arrays
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // const colrs =["yellow","red","blue","green"];
+    // const combine = fruits.concat(colrs);
+    // document.getElementById('demo').innerHTML = combine;
+
+     //array concat() three arrays
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // const colrs =["yellow","red","blue","green"];
+    // const flowers =["jasmine","rose","lilly",];
+    // const combine = fruits.concat(colrs,flowers);
+    //  document.getElementById('demo').innerHTML = combine;
+
+    //array copyWithin()
+
+    // const fruits = ["banana","apple","orange","kiwi"];
+    // document.getElementById('demo').innerHTML = fruits.copyWithin(2,0);
+    // document.getElementById('demo').innerHTML = fruits.copyWithin(1,0,1);
+    
+   //array flat()
+//    const myArr = [[1,2],[3,4],[5,6]];
+//    const newArr = myArr.flat();
+//    document.getElementById('demo').innerHTML =newArr;
+   
+
+   //array splice()
+//    const fruits = ["banana","apple","orange","kiwi"];
+//    fruits.splice(2,0,'grapes','berry');
+//    document.getElementById('demo').innerHTML = fruits;
+
+
+// fruits.splice(2,2,'grapes','berry');
+//   document.getElementById('demo').innerHTML = fruits;
+
+//removing elements using slice
+// const fruits = ["banana","apple","orange","kiwi"];
+// fruits.splice(0,1);
+// document.getElementById('demo').innerHTML = fruits;
+
+
+//toSpliced
+
+// const months =['jan','feb','mar','april'];
+// const spliced = months.toSpliced(0,1);
+// document.getElementById('demo').innerHTML = spliced;
+
+
+// array slice()
+// const fruits = ["banana","apple","orange","kiwi"];
+// const sliced = fruits.slice(1);
+// document.getElementById('demo').innerHTML = sliced;
+
+// const sliced1 = fruits.slice(3);
+// document.getElementById('demo').innerHTML =sliced1;
+
+// const sliced2 = fruits.slice(1,2);
+// document.getElementById('demo').innerHTML =sliced2;
+
+
+
+
+
+// array search method
+
+//indexOf()
+// const fruits = ["banana","apple","orange","kiwi","apple"];
+// let position = fruits.indexOf('apple')+1;
+// document.getElementById('demo').innerHTML = position;
+
+//lastIndexOf()
+// let position1 = fruits.lastIndexOf('apple')+1;
+// document.getElementById('demo1').innerHTML = position1;
+
+
+//array includes()
+//const fruits = ["banana","apple","orange","kiwi"];
+// document.getElementById('demo1').innerHTML = fruits.includes('mango');
+
+
+//array find()
+//finding first number over 18
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.find(myFunction);
+//  function myFunction(value,index,array) {
+//     return value >18;
+//  }
+//  document.getElementById('demo').innerHTML = first;
+
+
+ //findIndex()
+ const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+ function myFunction(value,index,array) {
+    return value >18;
+ }
+ document.getElementById('demo').innerHTML = first;
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
