@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+    <input id="hello" type="text" >
+    <button   onclick="clickMe()">Click Me</button>
+
+    <ul id="uList"></ul>
+
+
+    <script>
+
+           function clickMe(){
+
+          let inputs = document.getElementById("hello");
+
+            let inputContent = inputs.value;
+            
+            let list = document.createElement("li");
+            list.textContent= inputContent;
+
+            list.addEventListener("click",function(){
+                list.remove();
+            });
+
+            let taskLists = document.getElementById("uList")
+            taskLists.appendChild(list);
+
+            inputs.value ="";
+
+        
+           }
+          
+                
+
+
+                
+    
+
+
+            
+            
+            
+           
+            
+
+         
+         
+        
+            
+        
+    
+
+
+    </script>
+</body>
+</html>

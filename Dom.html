@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .myClass{
+            color: blue;
+            font-size: 200px;
+        }
+    </style>
 </head>
 
-    <h2 id="demo"></h2>
-    <h2 id="demo2"></h2>
-    <h1 id="demo3"></h1>
+    <h2 id="demo">klsdjakjsdkj</h2>
+    <h2 id="demo2"klsdjakjsdkj></h2>
+    <h1 id="demo3"klsdjakjsdkj></h1>
 
 
 
@@ -50,16 +56,30 @@
 //   game();
 
 
-const tDate = new Date(); 
-document.getElementById("demo").innerHTML = "date of fixed deposit opened:" + tDate.getFullYear(); 
+// const tDate = new Date(); 
+// document.getElementById("demo").innerHTML = "date of fixed deposit opened:" + tDate.getFullYear(); 
   
 
-const year = parseInt(prompt("enter the year:"))
-document.getElementById("demo2").innerHTML = "entered year:" + year
+// const year = parseInt(prompt("enter the year:"))
+// document.getElementById("demo2").innerHTML = "entered year:" + year
 
-const mDate =  tDate.getFullYear()+year;
-document.getElementById("demo3").innerHTML = "the maturedd date is:" + mDate
+// const mDate =  tDate.getFullYear()+year;
+// document.getElementById("demo3").innerHTML = "the maturedd date is:" + mDate
 
+
+let x = document.getElementById("demo")
+x.classList.add("myClass")
+
+
+let newElement  =   document.createElement("div")
+newElement.setAttribute("id", "hello")
+newElement.innerHTML = "kajsdjkjasjld"
+console.log(newElement);
+
+
+document.body.appendChild(newElement)
+
+document.body.removeChild(newElement)
 
 
 
