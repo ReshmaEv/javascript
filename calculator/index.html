@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <br>
+        <br><br><br>
+        <div id="first" >
+            <input  id="First" style="width:300px;height:50px;border-radius: 5px;font-size: 30px;" type="text">
+        </div><br>
+
+        
+        
+        <div class="third "style="margin-left: 37px;" onclick="tValue(7)" ><h5>7</h5></div>
+        <div class="third " onclick="tValue(8)"><h5>8</h5></div>
+        <div class="third " onclick="tValue(9)"><h5>9</h5></div>
+        <div class="third operator" style="border-radius: 10px;" onclick="setOperator('*')"><h5>*</h5></div>
+        <div class="third "style="margin-left: 37px;" onclick="tValue(4)"><h5>4</h5></div>
+        <div class="third " onclick="tValue(5)"><h5>5</h5></div>
+        <div class="third " onclick="tValue(6)"><h5>6</h5></div>
+        <div class="third operator" style="border-radius: 10px;" onclick="setOperator('-')"><h5>-</h5></div>
+        <div class="third "style="margin-left: 37px;" onclick="tValue(1)"><h5>1</h5></div>
+        <div class="third " onclick="tValue(2)"><h5>2</h5></div>
+        <div class="third " onclick="tValue(3)"><h5>3</h5></div>
+        <div class="third operator" style="border-radius: 10px;" onclick="setOperator('+')"><h5>+</h5></div>
+        <div class="third "style="margin-left: 37px;" onclick="tValue(0)"><h5>0</h5></div>
+        <div class="third operator"><h5>.</h5></div>
+        <div class="third operator" onclick="setOperator('/')"><h5>/</h5></div>
+        <div class="third operator" style="border-radius: 10px;" onclick="calculate()"><h5>=</h5></div>
+       
+
+    </div>
+
+    <script>
+        let firstNum ='';
+        let Operator ='';
+        let secondNum =''
+
+        function tValue(number){
+            document.getElementById("First").value += number;
+        }
+        function setOperator(op){
+            firstNum = parseFloat(document.getElementById('First').value);
+            Operator=op;
+            document.getElementById('First').value='';
+        }
+       
+        function calculate(){
+            secondNum = parseFloat(document.getElementById('First').value);
+            let result;
+
+            switch (Operator) {
+                case '+':
+                    result = firstNum + secondNum;
+                    break;
+                case '-':
+                    result = firstNum - secondNum;
+                    break;
+                case '*':
+                    result = firstNum * secondNum;
+                    break;
+                case '/':
+                    result = firstNum / secondNum;
+                    break;
+                default:
+                    result = 0;
+            }
+            document.getElementById("First").value =result;
+            firstNum = result;
+            
+        }
+
+          
+       
+            
+            
+       
+        
+        
+       
+    </script>
+</body>
+</html>
