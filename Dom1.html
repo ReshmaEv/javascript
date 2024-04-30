@@ -12,18 +12,26 @@
     <button   onclick="clickMe()">Click Me</button>
 
     <ul id="uList"></ul>
+    <p id="demo"></p>
 
 
     <script>
 
            function clickMe(){
 
-          let inputs = document.getElementById("hello"); 
+            let message = document.getElementById("demo");
 
-            let inputContent = inputs.value;
+            let inputs = document.getElementById("hello").value;
             
+            try {
+                if(inputs.trim() =="") throw " is empty";
+                if(isNaN(inputs)) throw "is not a number";
+                inputs = Number(inputs);
+                if(inputs < 5) throw "is too low";
+                if (inputs > 10) throw "is too high";
+                 
             let list = document.createElement("li");
-            list.textContent= inputContent;
+            list.textContent= inputs;
 
             list.addEventListener("click",function(){
                 list.remove();
@@ -33,9 +41,27 @@
             taskLists.appendChild(list);
 
             inputs.value ="";
+            list.style.listStyleType ="none";
+                               
+            } catch (error) {
+
+                message.innerHTML = "input " + error;
+                
+            }
+            finally{
+                document.getElementById("hello").value ="";
+            }
+
+          
+           
+
+
+            
+        
 
         
            }
+           
           
                 
 

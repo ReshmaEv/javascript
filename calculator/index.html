@@ -14,7 +14,7 @@
             <input  id="First" style="width:300px;height:50px;border-radius: 5px;font-size: 30px;" type="text">
         </div><br>
 
-        
+        <button class="third" onclick="clearData()"><h5>C</h5></button>
         
         <div class="third "style="margin-left: 37px;" onclick="tValue(7)" ><h5>7</h5></div>
         <div class="third " onclick="tValue(8)"><h5>8</h5></div>
@@ -45,13 +45,13 @@
             document.getElementById("First").value += number;
         }
         function setOperator(op){
-            firstNum = parseFloat(document.getElementById('First').value);
+            firstNum = document.getElementById('First').value;
             Operator=op;
             document.getElementById('First').value='';
         }
        
         function calculate(){
-            secondNum = parseFloat(document.getElementById('First').value);
+            secondNum = document.getElementById('First').value;
             let result;
 
             switch (Operator) {
@@ -75,6 +75,11 @@
             
         }
 
+     function clearData() {
+        console.log("ajshdah");
+        document.getElementById("First").value = ''
+     }
+
           
        
             
@@ -85,4 +90,4 @@
        
     </script>
 </body>
-</html>
+</html
