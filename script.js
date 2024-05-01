@@ -1,49 +1,69 @@
-// 2 solve the Array question  Using Array methods
-
-
-//[ no,district,+ve cases,death rate,curred rate,1st dose vaccine,2nd dose vaccine]
-covid_data = [
-    [1,'Ernakulam',34000,2000,23000,20000,2000],
-    [2,'Idukki',14000,3000,25000,30000,1000],
-    [3,'Thrissur',24000,4000,33000,24000,2500],
-    [4,'Pathanamthitta',20000,2000,45000,22000,1500],
-    [5,'Kozhikode',44000,5000,12000,21000,500],
-    [6,'Palakkad',12000,1000,20000,23000,3400],
-    [7,'Kottayam',27000,1500,27000,14000,1000],
-    [8,'Kollam',14000,2500,25000,18000,2700]
-]
-
-//1. district having Highest +ve case -// 
-
-let place = covid_data.reduce((c1,c2)) =>c1[2]>c2[2] ? c1:c2
 
 
 
 
 
-// //2. district having Highest 1st dose vaccine - 
 
 
 
+// function result(a){
+//     console.log(a);
+// }
 
-// // console.log('-------------------------------------------');
+
+// add(1,2,result)
+
+
+// const side = [1,2,3,4];
+
+// const area = function (side){
+//     return side*side;
+// }
+
+// const perimeter = function(side){
+//     return 4*side;
+// }
+
+
+// const calculate = function(side,logic){
+//     const output =[];
+//     for (i=0;i<side.length;i++){
+//         output.push(logic(side[i]))
+//     }
+//     return output;
+// }
+
+
+// console.log(calculate(side,area));
+// console.log(calculate(side,perimeter));
+
+
+// console.log("b");
+
+// setTimeout(()=>{
+//     console.log("agsjdghh");
+// },2000)
+// console.log("c");
+// console.log("vvmv");
+
+
+let promise1= new Promise(function(resolve,reject){
+
+    setTimeout(() => resolve("done"),1000);
+});
+
+promise1.then(
+    result => console.log(result)
     
+  );
 
-// //3. district having lowest death rate - 
-// console.log('-------------------------------------------');
-  
-
-
-// //4. sort data with +ve case in descending order - 
-// console.log('-------------------------------------------');
-
+let promise2 = new Promise(function(resolve,reject){
 
     
-// //5. is district with +ve cases > 15000 - 
-// console.log('-------------------------------------------');
+    reject ("woops!")
+})
+promise2.then(
+).catch((e)=>{
+    console.log(e);
+})
 
-// //6. sort data with 1st dose vaccine - 
-// console.log('-------------------------------------------');
-
-// //7. Print Thrissur details - 
-// console.log('-------------------------------------------');
