@@ -47,23 +47,55 @@
 // console.log("vvmv");
 
 
-let promise1= new Promise(function(resolve,reject){
+// let promise1= new Promise(function(resolve,reject){
 
-    setTimeout(() => resolve("done"),1000);
-});
+//     setTimeout(() => resolve("done"),1000);
+// });
 
-promise1.then(
-    result => console.log(result)
+// promise1.then(
+//     result => console.log(result)
     
-  );
+//   );
 
-let promise2 = new Promise(function(resolve,reject){
+// let promise2 = new Promise(function(resolve,reject){
 
     
-    reject ("woops!")
-})
-promise2.then(
-).catch((e)=>{
-    console.log(e);
-})
+//     reject ("woops!")
+// })
+// promise2.then(
+// ).catch((e)=>{
+//     console.log(e);
+// })
+
+
+
+let a = "https://jsonplaceholder.typicode.com/users"
+
+
+// let fetchdata = async() =>{
+
+//     let response = await fetch(a)
+//     let data = response.json()
+//     .then ((data)=>console.log(data))
+
+
+// }
+
+
+// fetchdata()
+
+
+let fetchdata = async() =>{
+
+    let response = await fetch(a)
+   console.log(response);
+
+   
+
+
+
+}
+
+
+fetchdata()
 
