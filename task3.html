@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  1.   //Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target 
+        
+//          function findIndices() {
+
+//             let nums = [3,4,5,6,7]
+//          let target = parseInt(prompt("enter the target number:"))
+//          console.log(target);
+       
+//          let indices = [];
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = i + 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) {
+//                 indices.push(i, j);
+//                 return indices;
+//             }
+//         }
+//     }
+    
+//     return indices; 
+    
+// }
+
+// console.log(findIndices());
+
+//2. majority element
+
+// function findMajorityNumber(elements) {
+//     let candidate = elements[0];
+//     let count = 1;
+
+//     for (let i = 1; i < elements.length; i++) {
+//         if (elements[i] === candidate) {
+//             count++;
+//         } else {
+//             count--;
+//         }
+
+//         if (count === 0) {
+//             candidate = elements[i];
+//             count = 1;
+//         }
+//     }
+
+    
+//     count = 0;
+//     for (let i = 0; i < elements.length; i++) {
+//         if (elements[i] === candidate) {
+//             count++;
+//         }
+//     }
+
+//     if (count > elements.length / 2) {
+//         return candidate;
+//     } else {
+//         return "No majority element found";
+//     }
+// }
+
+// let elements = [4,4,5,5,4];
+// let majorityNumber = findMajorityNumber(elements);
+// console.log("Majority Number:", majorityNumber);
+
+
+//3.// Given a string s consisting of words and spaces, return the length of the last word in the string.A word is a maximal 
+// substring consisting of non-space characters only.
+
+
+// function lengthOfLastWord(s) {
+    
+//     s = s.trim();
+
+
+//     const lastSpaceIndex = s.lastIndexOf(' ');
+
+    
+//     const lastWord = lastSpaceIndex !== -1 ? s.substring(lastSpaceIndex + 1) : s;
+
+    
+//     return lastWord.length;
+// }
+
+
+// const s = "my name is reshma";
+// console.log(lengthOfLastWord(s)); 
+
+function romanToInt(s) {
+    const romanToIntMap = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    };
+    
+    let result = 0;
+    
+    for (let i = 0; i < s.length; i++) {
+        const currentSymbol = s[i];
+        const nextSymbol = s[i + 1];
+        
+        
+        if (nextSymbol && romanToIntMap[currentSymbol] < romanToIntMap[nextSymbol]) {
+            result -= romanToIntMap[currentSymbol];
+        } else {
+            result += romanToIntMap[currentSymbol];
+        }
+    }
+    
+    return result;
+}
+
+
+const romanNumeral = "MMDDCCLLXXVVII";
+console.log(romanToInt(romanNumeral)); 
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
